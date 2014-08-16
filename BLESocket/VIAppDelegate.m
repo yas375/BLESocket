@@ -10,8 +10,18 @@
 
 @implementation VIAppDelegate
 
+#pragma mark - Methods
+
+- (void)setupLogging
+{
+  [DDLog addLogger:[DDTTYLogger sharedInstance]];
+}
+
+#pragma mark - UIApplicationDelegate
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  [self setupLogging];
   return YES;
 }
 
