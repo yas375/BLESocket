@@ -1,4 +1,19 @@
 PODS:
+  - BlocksKit (2.2.3):
+    - BlocksKit/All
+  - BlocksKit/All (2.2.3):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+    - BlocksKit/MessageUI
+    - BlocksKit/UIKit
+  - BlocksKit/Core (2.2.3)
+  - BlocksKit/DynamicDelegate (2.2.3)
+  - BlocksKit/MessageUI (2.2.3):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - BlocksKit/UIKit (2.2.3):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
   - CocoaLumberjack (2.0.0-beta):
     - CocoaLumberjack/CLI
     - CocoaLumberjack/Core
@@ -10,9 +25,11 @@ PODS:
     - CocoaLumberjack/Core
 
 DEPENDENCIES:
+  - BlocksKit
   - CocoaLumberjack
 
 SPEC CHECKSUMS:
+  BlocksKit: 07c8a80f04275efac6a5f8b973782489c083a182
   CocoaLumberjack: aadc76d7bd6c839ca84b38ed50cbf89d7cf8c693
 
 COCOAPODS: 0.33.1
