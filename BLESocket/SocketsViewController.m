@@ -146,6 +146,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 - (void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error
 {
   DDLogVerbose(@"Peripheral %@ did update value for characteristc %@. Error %@", peripheral, characteristic, error);
+  [self.tableView reloadData];
 }
 
 #pragma mark - UITableViewDataSource
@@ -166,19 +167,48 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
   CBPeripheral *peripheral = self.socketPeripherals[indexPath.row];
 
-  NSString *state;
+  NSString *connactionState;
   switch (peripheral.state) {
     case CBPeripheralStateDisconnected:
-      state = @"disconnected";
+      connactionState = @"disconnected";
       break;
     case CBPeripheralStateConnecting:
-      state = @"connecting...";
+      connactionState = @"connecting...";
       break;
     case CBPeripheralStateConnected:
-      state = @"connected";
+      connactionState = @"connected";
       break;
   }
-  cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@", peripheral.name, state];
+  cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@", peripheral.name, connactionState];
+
+  NSString *state = @"unknown";
+
+  CBService *service = [peripheral.services bk_match:^BOOL(CBService *obj) {
+    return [obj.UUID isEqual:SOCKET_SERVICE_UUID];
+  }];
+
+  if (service) {
+    CBCharacteristic *characteristic = [service.characteristics bk_match:^BOOL(CBCharacteristic *obj) {
+      return [obj.UUID isEqual:SOCKET_CURRENT_CHARACTERISTIC_UUID];
+    }];
+
+    if (characteristic) {
+      uint16_t *bytes = (uint16_t *)characteristic.value.bytes;
+
+      if (bytes[0] == 0x01) {
+        state = @"enabled";
+      }
+      else if (bytes[0] == 0x00) {
+        state = @"disabled";
+      }
+      else {
+        DDLogVerbose(@"Error reading value of characteristic %@", characteristic);
+        state = @"error during reading value";
+      }
+    }
+  }
+
+  cell.detailTextLabel.text = [NSString stringWithFormat:@"Socket state: %@", state];
 
   return cell;
 }
