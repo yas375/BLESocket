@@ -43,7 +43,13 @@
                             <outlet property="delegate" destination="Qh4-8f-oPX" id="mEt-fN-1ke"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="BLE Sockets" id="dXh-HR-nn2"/>
+                    <navigationItem key="navigationItem" title="BLE Sockets" id="dXh-HR-nn2">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="yHg-tO-BZa">
+                            <connections>
+                                <action selector="didTapRefresh:" destination="Qh4-8f-oPX" id="30X-qh-bC3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bGW-Nd-crT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

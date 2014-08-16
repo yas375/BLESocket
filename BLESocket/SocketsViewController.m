@@ -41,6 +41,15 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
   }
 }
 
+- (IBAction)didTapRefresh:(UIBarButtonItem *)sender
+{
+  [self.centralManager stopScan];
+  [self.socketPeripherals removeAllObjects];
+  [self.tableView reloadData];
+
+  self.centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
+}
+
 #pragma mark - CBCentralManagerDelegate
 
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central
