@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		50391660199F63C900BD1878 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5039165F199F63C900BD1878 /* Cocoa.framework */; };
+		5039166A199F63C900BD1878 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50391668199F63C900BD1878 /* InfoPlist.strings */; };
+		5039166C199F63C900BD1878 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5039166B199F63C900BD1878 /* main.m */; };
+		50391670199F63C900BD1878 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5039166E199F63C900BD1878 /* Credits.rtf */; };
+		50391673199F63C900BD1878 /* VIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50391672199F63C900BD1878 /* VIAppDelegate.m */; };
+		50391676199F63C900BD1878 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50391674199F63C900BD1878 /* MainMenu.xib */; };
+		50391678199F63C900BD1878 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50391677199F63C900BD1878 /* Images.xcassets */; };
+		5039167F199F63CA00BD1878 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5039167E199F63CA00BD1878 /* XCTest.framework */; };
+		50391680199F63CA00BD1878 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5039165F199F63C900BD1878 /* Cocoa.framework */; };
+		50391688199F63CA00BD1878 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50391686199F63CA00BD1878 /* InfoPlist.strings */; };
+		5039168A199F63CA00BD1878 /* BLESocketEmulatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50391689199F63CA00BD1878 /* BLESocketEmulatorTests.m */; };
+		50391694199F651700BD1878 /* IOBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50391693199F651700BD1878 /* IOBluetooth.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		50391681199F63CA00BD1878 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50391654199F63C900BD1878 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5039165B199F63C900BD1878;
+			remoteInfo = BLESocketEmulator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5039165C199F63C900BD1878 /* BLESocketEmulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLESocketEmulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5039165F199F63C900BD1878 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		50391662199F63C900BD1878 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		50391663199F63C900BD1878 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		50391664199F63C900BD1878 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		50391667199F63C900BD1878 /* BLESocketEmulator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BLESocketEmulator-Info.plist"; sourceTree = "<group>"; };
+		50391669199F63C900BD1878 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5039166B199F63C900BD1878 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5039166D199F63C900BD1878 /* BLESocketEmulator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BLESocketEmulator-Prefix.pch"; sourceTree = "<group>"; };
+		5039166F199F63C900BD1878 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		50391671199F63C900BD1878 /* VIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VIAppDelegate.h; sourceTree = "<group>"; };
+		50391672199F63C900BD1878 /* VIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VIAppDelegate.m; sourceTree = "<group>"; };
+		50391675199F63C900BD1878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		50391677199F63C900BD1878 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5039167D199F63CA00BD1878 /* BLESocketEmulatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BLESocketEmulatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5039167E199F63CA00BD1878 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		50391685199F63CA00BD1878 /* BLESocketEmulatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BLESocketEmulatorTests-Info.plist"; sourceTree = "<group>"; };
+		50391687199F63CA00BD1878 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		50391689199F63CA00BD1878 /* BLESocketEmulatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLESocketEmulatorTests.m; sourceTree = "<group>"; };
+		50391693199F651700BD1878 /* IOBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOBluetooth.framework; path = System/Library/Frameworks/IOBluetooth.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		50391659199F63C900BD1878 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50391694199F651700BD1878 /* IOBluetooth.framework in Frameworks */,
+				50391660199F63C900BD1878 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5039167A199F63CA00BD1878 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50391680199F63CA00BD1878 /* Cocoa.framework in Frameworks */,
+				5039167F199F63CA00BD1878 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		50391653199F63C900BD1878 = {
+			isa = PBXGroup;
+			children = (
+				50391665199F63C900BD1878 /* BLESocketEmulator */,
+				50391683199F63CA00BD1878 /* BLESocketEmulatorTests */,
+				5039165E199F63C900BD1878 /* Frameworks */,
+				5039165D199F63C900BD1878 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5039165D199F63C900BD1878 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5039165C199F63C900BD1878 /* BLESocketEmulator.app */,
+				5039167D199F63CA00BD1878 /* BLESocketEmulatorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5039165E199F63C900BD1878 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50391693199F651700BD1878 /* IOBluetooth.framework */,
+				5039165F199F63C900BD1878 /* Cocoa.framework */,
+				5039167E199F63CA00BD1878 /* XCTest.framework */,
+				50391661199F63C900BD1878 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		50391661199F63C900BD1878 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50391662199F63C900BD1878 /* AppKit.framework */,
+				50391663199F63C900BD1878 /* CoreData.framework */,
+				50391664199F63C900BD1878 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		50391665199F63C900BD1878 /* BLESocketEmulator */ = {
+			isa = PBXGroup;
+			children = (
+				50391671199F63C900BD1878 /* VIAppDelegate.h */,
+				50391672199F63C900BD1878 /* VIAppDelegate.m */,
+				50391674199F63C900BD1878 /* MainMenu.xib */,
+				50391677199F63C900BD1878 /* Images.xcassets */,
+				50391666199F63C900BD1878 /* Supporting Files */,
+			);
+			path = BLESocketEmulator;
+			sourceTree = "<group>";
+		};
+		50391666199F63C900BD1878 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				50391667199F63C900BD1878 /* BLESocketEmulator-Info.plist */,
+				50391668199F63C900BD1878 /* InfoPlist.strings */,
+				5039166B199F63C900BD1878 /* main.m */,
+				5039166D199F63C900BD1878 /* BLESocketEmulator-Prefix.pch */,
+				5039166E199F63C900BD1878 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		50391683199F63CA00BD1878 /* BLESocketEmulatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				50391689199F63CA00BD1878 /* BLESocketEmulatorTests.m */,
+				50391684199F63CA00BD1878 /* Supporting Files */,
+			);
+			path = BLESocketEmulatorTests;
+			sourceTree = "<group>";
+		};
+		50391684199F63CA00BD1878 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				50391685199F63CA00BD1878 /* BLESocketEmulatorTests-Info.plist */,
+				50391686199F63CA00BD1878 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5039165B199F63C900BD1878 /* BLESocketEmulator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5039168D199F63CA00BD1878 /* Build configuration list for PBXNativeTarget "BLESocketEmulator" */;
+			buildPhases = (
+				50391658199F63C900BD1878 /* Sources */,
+				50391659199F63C900BD1878 /* Frameworks */,
+				5039165A199F63C900BD1878 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BLESocketEmulator;
+			productName = BLESocketEmulator;
+			productReference = 5039165C199F63C900BD1878 /* BLESocketEmulator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5039167C199F63CA00BD1878 /* BLESocketEmulatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50391690199F63CA00BD1878 /* Build configuration list for PBXNativeTarget "BLESocketEmulatorTests" */;
+			buildPhases = (
+				50391679199F63CA00BD1878 /* Sources */,
+				5039167A199F63CA00BD1878 /* Frameworks */,
+				5039167B199F63CA00BD1878 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50391682199F63CA00BD1878 /* PBXTargetDependency */,
+			);
+			name = BLESocketEmulatorTests;
+			productName = BLESocketEmulatorTests;
+			productReference = 5039167D199F63CA00BD1878 /* BLESocketEmulatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		50391654199F63C900BD1878 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = VI;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Victor Ilyukevich";
+				TargetAttributes = {
+					5039167C199F63CA00BD1878 = {
+						TestTargetID = 5039165B199F63C900BD1878;
+					};
+				};
+			};
+			buildConfigurationList = 50391657199F63C900BD1878 /* Build configuration list for PBXProject "BLESocketEmulator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 50391653199F63C900BD1878;
+			productRefGroup = 5039165D199F63C900BD1878 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5039165B199F63C900BD1878 /* BLESocketEmulator */,
+				5039167C199F63CA00BD1878 /* BLESocketEmulatorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5039165A199F63C900BD1878 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5039166A199F63C900BD1878 /* InfoPlist.strings in Resources */,
+				50391678199F63C900BD1878 /* Images.xcassets in Resources */,
+				50391670199F63C900BD1878 /* Credits.rtf in Resources */,
+				50391676199F63C900BD1878 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5039167B199F63CA00BD1878 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50391688199F63CA00BD1878 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		50391658199F63C900BD1878 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5039166C199F63C900BD1878 /* main.m in Sources */,
+				50391673199F63C900BD1878 /* VIAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50391679199F63CA00BD1878 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5039168A199F63CA00BD1878 /* BLESocketEmulatorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		50391682199F63CA00BD1878 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5039165B199F63C900BD1878 /* BLESocketEmulator */;
+			targetProxy = 50391681199F63CA00BD1878 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		50391668199F63C900BD1878 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50391669199F63C900BD1878 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5039166E199F63C900BD1878 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5039166F199F63C900BD1878 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		50391674199F63C900BD1878 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50391675199F63C900BD1878 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		50391686199F63CA00BD1878 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50391687199F63CA00BD1878 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5039168B199F63CA00BD1878 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5039168C199F63CA00BD1878 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5039168E199F63CA00BD1878 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BLESocketEmulator/BLESocketEmulator-Prefix.pch";
+				INFOPLIST_FILE = "BLESocketEmulator/BLESocketEmulator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5039168F199F63CA00BD1878 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BLESocketEmulator/BLESocketEmulator-Prefix.pch";
+				INFOPLIST_FILE = "BLESocketEmulator/BLESocketEmulator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		50391691199F63CA00BD1878 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BLESocketEmulator.app/Contents/MacOS/BLESocketEmulator";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BLESocketEmulator/BLESocketEmulator-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BLESocketEmulatorTests/BLESocketEmulatorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		50391692199F63CA00BD1878 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BLESocketEmulator.app/Contents/MacOS/BLESocketEmulator";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BLESocketEmulator/BLESocketEmulator-Prefix.pch";
+				INFOPLIST_FILE = "BLESocketEmulatorTests/BLESocketEmulatorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		50391657199F63C900BD1878 /* Build configuration list for PBXProject "BLESocketEmulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5039168B199F63CA00BD1878 /* Debug */,
+				5039168C199F63CA00BD1878 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5039168D199F63CA00BD1878 /* Build configuration list for PBXNativeTarget "BLESocketEmulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5039168E199F63CA00BD1878 /* Debug */,
+				5039168F199F63CA00BD1878 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		50391690199F63CA00BD1878 /* Build configuration list for PBXNativeTarget "BLESocketEmulatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50391691199F63CA00BD1878 /* Debug */,
+				50391692199F63CA00BD1878 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 50391654199F63C900BD1878 /* Project object */;
+}

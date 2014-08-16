@@ -7,6 +7,7 @@
 //
 
 #import "SocketsViewController.h"
+#import "SocketCell.h"
 @import CoreBluetooth;
 
 static const int ddLogLevel = LOG_LEVEL_VERBOSE;
@@ -66,6 +67,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     DDLogVerbose(@"Discovered potential socket peripharal %@", peripheral);
     [self.centralManager connectPeripheral:peripheral options:nil];
   }
+  [self.tableView reloadData];
 }
 
 - (void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error
@@ -86,6 +88,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
   peripheral.delegate = self;
   [peripheral discoverServices:@[SOCKET_SERVICE_UUID]];
+  [self.tableView reloadData];
 }
 
 #pragma mark - CBPeripheralDelegate
@@ -116,11 +119,11 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
   if (error) {
     DDLogError(@"Error while discovering characteristic of service %@ of peripheral %@ (%@)", service, peripheral, error);
-  } else if ([service isEqual:SOCKET_SERVICE_UUID]) {
+  } else if ([service.UUID isEqual:SOCKET_SERVICE_UUID]) {
     for (CBCharacteristic *characteristic in service.characteristics) {
       if ([characteristic.UUID isEqual:SOCKET_CURRENT_CHARACTERISTIC_UUID]) {
-        // point to subscribe
-        [self.tableView reloadData];
+        DDLogVerbose(@"Reading value for characteristic %@", characteristic);
+        [peripheral readValueForCharacteristic:characteristic];
         needsToDisconnect = NO;
       }
     }
@@ -129,6 +132,46 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
   if (needsToDisconnect) {
     [self.centralManager cancelPeripheralConnection:peripheral];
   }
+}
+
+- (void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error
+{
+  DDLogVerbose(@"Peripheral %@ did update value for characteristc %@. Error %@", peripheral, characteristic, error);
+}
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+  return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+  return self.socketPeripherals.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  SocketCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"SocketCellIdentifier"];
+
+  CBPeripheral *peripheral = self.socketPeripherals[indexPath.row];
+
+  NSString *state;
+  switch (peripheral.state) {
+    case CBPeripheralStateDisconnected:
+      state = @"disconnected";
+      break;
+    case CBPeripheralStateConnecting:
+      state = @"connecting...";
+      break;
+    case CBPeripheralStateConnected:
+      state = @"connected";
+      break;
+  }
+  cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@", peripheral.name, state];
+
+  return cell;
 }
 
 #pragma mark - UIViewController
