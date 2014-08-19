@@ -193,17 +193,26 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     }];
 
     if (characteristic) {
-      uint16_t *bytes = (uint16_t *)characteristic.value.bytes;
+      if (characteristic.value) {
+        uint8_t *bytes = (uint8_t *)characteristic.value.bytes;
 
-      if (bytes[0] == 0x01) {
-        state = @"enabled";
-      }
-      else if (bytes[0] == 0x00) {
-        state = @"disabled";
+        if (bytes == NULL) {
+          state = @"read value is NULL";
+        }
+        else if (*bytes == 0x01) {
+          state = @"enabled";
+        }
+        else if (*bytes == 0x00) {
+          state = @"disabled";
+        }
+        else {
+          DDLogVerbose(@"Error reading value of characteristic %@", characteristic);
+          state = @"error during reading value";
+        }
       }
       else {
-        DDLogVerbose(@"Error reading value of characteristic %@", characteristic);
-        state = @"error during reading value";
+        DDLogVerbose(@"nil value of characteristic %@", characteristic);
+        state = @"value is nil";
       }
     }
   }

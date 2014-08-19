@@ -15,7 +15,6 @@
 @interface VIAppDelegate ()
 <CBPeripheralManagerDelegate>
 @property(nonatomic,strong) CBPeripheralManager *peripheralManager;
-@property(nonatomic,strong) CBMutableCharacteristic *current;
 @end
 
 @implementation VIAppDelegate
@@ -30,13 +29,9 @@
 - (void)peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral
 {
   if (peripheral.state == CBPeripheralManagerStatePoweredOn) {
-    uint16_t value[1] = { 0x01 };
-    NSData *a = [NSData dataWithBytes:value length:sizeof(unsigned char)];
-
     CBMutableService *service = [[CBMutableService alloc] initWithType:SOCKET_SERVICE_UUID primary:YES];
-    CBMutableCharacteristic *current = [[CBMutableCharacteristic alloc] initWithType:SOCKET_CURRENT_CHARACTERISTIC_UUID properties:CBCharacteristicPropertyRead value:a permissions:CBAttributePermissionsReadable];
+    CBMutableCharacteristic *current = [[CBMutableCharacteristic alloc] initWithType:SOCKET_CURRENT_CHARACTERISTIC_UUID properties:CBCharacteristicPropertyRead value:nil permissions:CBAttributePermissionsReadable];
     service.characteristics = @[current];
-    self.current = current;
     [self.peripheralManager addService:service];
     [self.peripheralManager startAdvertising:@{ CBAdvertisementDataServiceUUIDsKey : @[service.UUID] }];
   } else {
@@ -59,14 +54,16 @@
 
 - (void)peripheralManager:(CBPeripheralManager *)peripheral didReceiveReadRequest:(CBATTRequest *)request
 {
-  static BOOL enabled = YES;
+  if ([request.characteristic.UUID isEqual:SOCKET_CURRENT_CHARACTERISTIC_UUID]) {
+    static BOOL enabled = YES;
 
-  uint16_t value[1] = { (enabled ? 0x01 : 0x00) };
-  self.current.value = [NSData dataWithBytes:value length:sizeof(unsigned char)];
+    uint8_t value = (enabled ? 0x01 : 0x00);
+    request.value = [NSData dataWithBytes:&value length:sizeof(uint8_t)];
 
-  [self.peripheralManager respondToRequest:request withResult:CBATTErrorSuccess];
+    [self.peripheralManager respondToRequest:request withResult:CBATTErrorSuccess];
 
-  enabled = !enabled;
+    enabled = !enabled;
+  }
 }
 
 @end
