@@ -27,6 +27,12 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 #pragma mark - Methods
 
+- (void)didTriggerRefreshControl:(UIRefreshControl *)sender
+{
+  [self recreateCentralManager];
+  [sender endRefreshing];
+}
+
 - (NSString *)errorMesssageForState:(CBCentralManagerState)state
 {
   if (state == CBCentralManagerStateUnsupported) {
@@ -77,6 +83,13 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     return nil;
   }
   return @[SOCKET_SERVICE_UUID];
+}
+
+- (void)setupRefreshControl
+{
+  UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+  [refreshControl addTarget:self action:@selector(didTriggerRefreshControl:) forControlEvents:UIControlEventValueChanged];
+  self.refreshControl = refreshControl;
 }
 
 #pragma mark - CBCentralManagerDelegate
@@ -258,6 +271,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
   [super viewDidLoad];
 
   self.navigationItem.rightBarButtonItem = [self makeScanModeSwitcher];
+  [self setupRefreshControl];
 
   self.socketPeripherals = [NSMutableArray array];
   self.centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
