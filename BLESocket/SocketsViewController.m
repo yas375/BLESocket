@@ -19,6 +19,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 @interface SocketsViewController ()
 <CBCentralManagerDelegate,CBPeripheralDelegate>
 @property(nonatomic,strong) CBCentralManager *centralManager;
+@property(nonatomic,strong) UISegmentedControl *scanModeSwitcher;
 @property(nonatomic,strong) NSMutableArray *socketPeripherals;
 @end
 
@@ -42,17 +43,39 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
   }
 }
 
-- (IBAction)didTapRefresh:(UIBarButtonItem *)sender
+- (UIBarButtonItem *)makeScanModeSwitcher
+{
+  NSArray *elements = @[@"All", @"FF10"];
+  self.scanModeSwitcher = [[UISegmentedControl alloc] initWithItems:elements];
+  self.scanModeSwitcher.selectedSegmentIndex = 0;
+
+  [self.scanModeSwitcher addTarget:self action:@selector(scanModeSegmentedControlAction:) forControlEvents:UIControlEventValueChanged];
+  UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.scanModeSwitcher];
+  return barButtonItem;
+}
+
+- (void)recreateCentralManager
 {
   [self.centralManager stopScan];
+  [self.socketPeripherals bk_each:^(CBPeripheral *obj) {
+    [self.centralManager cancelPeripheralConnection:obj];
+  }];
   [self.socketPeripherals removeAllObjects];
   [self.tableView reloadData];
 
   self.centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
 }
 
+- (void)scanModeSegmentedControlAction:(UISegmentedControl *)sender
+{
+  [self recreateCentralManager];
+}
+
 - (NSArray *)servicesToScan
 {
+  if (self.scanModeSwitcher.selectedSegmentIndex == 0) {
+    return nil;
+  }
   return @[SOCKET_SERVICE_UUID];
 }
 
@@ -234,8 +257,12 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 {
   [super viewDidLoad];
 
+  self.navigationItem.rightBarButtonItem = [self makeScanModeSwitcher];
+
   self.socketPeripherals = [NSMutableArray array];
   self.centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
+
+  [self recreateCentralManager];
 }
 
 @end
