@@ -440,6 +440,7 @@
 				GCC_PREFIX_HEADER = "BLESocket/BLESocket-Prefix.pch";
 				INFOPLIST_FILE = "BLESocket/BLESocket-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "db0ef2b6-26ba-4ba9-a6fc-ee64c3b1bdf2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

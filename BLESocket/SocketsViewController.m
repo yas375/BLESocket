@@ -12,8 +12,9 @@
 
 static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
-#define SOCKET_SERVICE_UUID [CBUUID UUIDWithString:@"FF10"]
-#define SOCKET_CURRENT_CHARACTERISTIC_UUID [CBUUID UUIDWithString:@"FF11"]
+#define DEVICE_INFORMATION_SERVICE_UUID [CBUUID UUIDWithString:@"180A"]
+#define SOCKET_SERVICE_UUID [CBUUID UUIDWithString:@"10FF91F6-F974-EEA6-4F4C-D732E03823B6"]
+#define SOCKET_CURRENT_CHARACTERISTIC_UUID [CBUUID UUIDWithString:@"11FF91F6-F974-EEA6-4F4C-D732E03823B6"]
 
 @interface SocketsViewController ()
 <CBCentralManagerDelegate,CBPeripheralDelegate>
@@ -50,14 +51,21 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
   self.centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
 }
 
+- (NSArray *)servicesToScan
+{
+  return @[SOCKET_SERVICE_UUID];
+}
+
 #pragma mark - CBCentralManagerDelegate
 
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central
 {
-  DDLogVerbose(@"centralManagerDidUpdateState %d", central.state);
+  DDLogVerbose(@"centralManagerDidUpdateState %d", (int)central.state);
 
   if (central.state == CBCentralManagerStatePoweredOn) {
-    [self.centralManager scanForPeripheralsWithServices:@[SOCKET_SERVICE_UUID] options:nil];
+    NSArray *services = self.servicesToScan;
+    DDLogVerbose(@"Will scan for peripharals with services: %@", services);
+    [self.centralManager scanForPeripheralsWithServices:services options:nil];
   }
   else {
     NSString *message = [self errorMesssageForState:central.state];
@@ -70,10 +78,11 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI
 {
+  DDLogVerbose(@"Discovered potential socket peripharal %@ with advertisement data: \n%@", peripheral, advertisementData);
+
   if ([self.socketPeripherals containsObject:peripheral] == NO) {
     [self.socketPeripherals addObject:peripheral];
 
-    DDLogVerbose(@"Discovered potential socket peripharal %@", peripheral);
     [self.centralManager connectPeripheral:peripheral options:nil];
   }
   [self.tableView reloadData];
@@ -96,6 +105,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
   DDLogVerbose(@"Did connect peripharal %@", peripheral);
 
   peripheral.delegate = self;
+  DDLogVerbose(@"Will discover service %@", SOCKET_SERVICE_UUID);
   [peripheral discoverServices:@[SOCKET_SERVICE_UUID]];
   [self.tableView reloadData];
 }
@@ -104,26 +114,22 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error
 {
-  BOOL needsToDisconnect = YES;
-
+  DDLogVerbose(@"didDiscoverServices:");
   if (error) {
     DDLogError(@"Error while discovering services of peripheral %@ (%@)", peripheral, error);
   } else {
     for (CBService *service in peripheral.services) {
       if ([service.UUID isEqual:SOCKET_SERVICE_UUID]) {
+        DDLogVerbose(@"Will discover characteristic %@", SOCKET_CURRENT_CHARACTERISTIC_UUID);
         [peripheral discoverCharacteristics:@[SOCKET_CURRENT_CHARACTERISTIC_UUID] forService:service];
-        needsToDisconnect = NO;
       }
     }
-  }
-
-  if (needsToDisconnect) {
-    [self.centralManager cancelPeripheralConnection:peripheral];
   }
 }
 
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error
 {
+  DDLogVerbose(@"didDiscoverCharacteristicsForService: %@; error: %@", service, error);
   BOOL needsToDisconnect = YES;
 
   if (error) {
