@@ -23,13 +23,20 @@ PODS:
   - CocoaLumberjack/Core (2.0.0-beta)
   - CocoaLumberjack/Extensions (2.0.0-beta):
     - CocoaLumberjack/Core
+  - LumberjackConsole (2.1.0):
+    - CocoaLumberjack (>= 2.0.0-beta)
+    - NBUCore (>= 2.0.2)
+  - NBUCore (2.0.3)
 
 DEPENDENCIES:
   - BlocksKit
   - CocoaLumberjack
+  - LumberjackConsole
 
 SPEC CHECKSUMS:
   BlocksKit: 07c8a80f04275efac6a5f8b973782489c083a182
   CocoaLumberjack: aadc76d7bd6c839ca84b38ed50cbf89d7cf8c693
+  LumberjackConsole: d3f161cfebc1a3a0f9c4d8d731f0ca0dccc5d8ab
+  NBUCore: 397184612d5f05d7730aaad98d6bc0a75b7984ef
 
 COCOAPODS: 0.33.1

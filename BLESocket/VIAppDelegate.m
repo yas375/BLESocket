@@ -7,6 +7,9 @@
 //
 
 #import "VIAppDelegate.h"
+#import <LumberjackConsole/PTEDashboard.h>
+
+static const int ddLogLevel = LOG_LEVEL_INFO;
 
 @implementation VIAppDelegate
 
@@ -15,6 +18,8 @@
 - (void)setupLogging
 {
   [DDLog addLogger:[DDTTYLogger sharedInstance]];
+  [[PTEDashboard sharedDashboard] show];
+  DDLogInfo(@"Added console dashboard");
 }
 
 #pragma mark - UIApplicationDelegate
