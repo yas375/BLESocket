@@ -1,1137 +1,531 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>1E69CBD32FED4A5FAC972B5B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A1113C64B86C4E83B54A83D4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>277F7A6CE3DCB9321B2284C1</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CF7C4095CF4851679A17C820</string>
-				<string>E38E2C2600D0F2DA1258A8D7</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>503915C7199F3D9D00BD1878</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>503915D9199F3D9D00BD1878</string>
-				<string>503915F2199F3D9D00BD1878</string>
-				<string>503915D2199F3D9D00BD1878</string>
-				<string>503915D1199F3D9D00BD1878</string>
-				<string>277F7A6CE3DCB9321B2284C1</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>503915C8199F3D9D00BD1878</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>CLASSPREFIX</key>
-				<string>VI</string>
-				<key>LastUpgradeCheck</key>
-				<string>0510</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>Victor Ilyukevich</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>503915EA199F3D9D00BD1878</key>
-					<dict>
-						<key>TestTargetID</key>
-						<string>503915CF199F3D9D00BD1878</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>503915CB199F3D9D00BD1878</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>503915C7199F3D9D00BD1878</string>
-			<key>productRefGroup</key>
-			<string>503915D1199F3D9D00BD1878</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>503915CF199F3D9D00BD1878</string>
-				<string>503915EA199F3D9D00BD1878</string>
-			</array>
-		</dict>
-		<key>503915CB199F3D9D00BD1878</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>503915FA199F3D9D00BD1878</string>
-				<string>503915FB199F3D9D00BD1878</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>503915CC199F3D9D00BD1878</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>50391612199F554A00BD1878</string>
-				<string>503915E0199F3D9D00BD1878</string>
-				<string>5039160D199F547400BD1878</string>
-				<string>503915E4199F3D9D00BD1878</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>503915CD199F3D9D00BD1878</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>503915D6199F3D9D00BD1878</string>
-				<string>503915D8199F3D9D00BD1878</string>
-				<string>503915D4199F3D9D00BD1878</string>
-				<string>1E69CBD32FED4A5FAC972B5B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>503915CE199F3D9D00BD1878</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>503915DE199F3D9D00BD1878</string>
-				<string>503915E6199F3D9D00BD1878</string>
-				<string>5039160F199F547B00BD1878</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>503915CF199F3D9D00BD1878</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>503915FC199F3D9D00BD1878</string>
-			<key>buildPhases</key>
-			<array>
-				<string>F703DB0493C441A48449EC55</string>
-				<string>503915CC199F3D9D00BD1878</string>
-				<string>503915CD199F3D9D00BD1878</string>
-				<string>503915CE199F3D9D00BD1878</string>
-				<string>CE65FFFD34BA40EFB2DD2BF6</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>BLESocket</string>
-			<key>productName</key>
-			<string>BLESocket</string>
-			<key>productReference</key>
-			<string>503915D0199F3D9D00BD1878</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>503915D0199F3D9D00BD1878</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>BLESocket.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>503915D1199F3D9D00BD1878</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>503915D0199F3D9D00BD1878</string>
-				<string>503915EB199F3D9D00BD1878</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>503915D2199F3D9D00BD1878</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>503915D5199F3D9D00BD1878</string>
-				<string>503915D3199F3D9D00BD1878</string>
-				<string>503915D7199F3D9D00BD1878</string>
-				<string>503915EC199F3D9D00BD1878</string>
-				<string>A1113C64B86C4E83B54A83D4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>503915D3199F3D9D00BD1878</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>503915D4199F3D9D00BD1878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>503915D3199F3D9D00BD1878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>503915D5199F3D9D00BD1878</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreGraphics.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/CoreGraphics.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>503915D6199F3D9D00BD1878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>503915D5199F3D9D00BD1878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>503915D7199F3D9D00BD1878</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>UIKit.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/UIKit.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>503915D8199F3D9D00BD1878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>503915D7199F3D9D00BD1878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>503915D9199F3D9D00BD1878</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>503915E5199F3D9D00BD1878</string>
-				<string>5039160A199F546100BD1878</string>
-				<string>5039160E199F547B00BD1878</string>
-				<string>503915DA199F3D9D00BD1878</string>
-				<string>503915E2199F3D9D00BD1878</string>
-				<string>503915E3199F3D9D00BD1878</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>BLESocket</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>503915DA199F3D9D00BD1878</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>503915DB199F3D9D00BD1878</string>
-				<string>503915E1199F3D9D00BD1878</string>
-				<string>503915DC199F3D9D00BD1878</string>
-				<string>503915DF199F3D9D00BD1878</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>503915DB199F3D9D00BD1878</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>BLESocket-Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>503915DC199F3D9D00BD1878</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>503915DD199F3D9D00BD1878</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>503915DD199F3D9D00BD1878</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.strings</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>503915DE199F3D9D00BD1878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>503915DC199F3D9D00BD1878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>503915DF199F3D9D00BD1878</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>main.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>503915E0199F3D9D00BD1878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>503915DF199F3D9D00BD1878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>503915E1199F3D9D00BD1878</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>BLESocket-Prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>503915E2199F3D9D00BD1878</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>VIAppDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>503915E3199F3D9D00BD1878</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>VIAppDelegate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>503915E4199F3D9D00BD1878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>503915E3199F3D9D00BD1878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>503915E5199F3D9D00BD1878</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Images.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>503915E6199F3D9D00BD1878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>503915E5199F3D9D00BD1878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>503915E7199F3D9D00BD1878</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>503915E8199F3D9D00BD1878</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>503915ED199F3D9D00BD1878</string>
-				<string>503915EF199F3D9D00BD1878</string>
-				<string>503915EE199F3D9D00BD1878</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>503915E9199F3D9D00BD1878</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>503915F7199F3D9D00BD1878</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>503915EA199F3D9D00BD1878</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>503915FF199F3D9D00BD1878</string>
-			<key>buildPhases</key>
-			<array>
-				<string>503915E7199F3D9D00BD1878</string>
-				<string>503915E8199F3D9D00BD1878</string>
-				<string>503915E9199F3D9D00BD1878</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>503915F1199F3D9D00BD1878</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>BLESocketTests</string>
-			<key>productName</key>
-			<string>BLESocketTests</string>
-			<key>productReference</key>
-			<string>503915EB199F3D9D00BD1878</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>503915EB199F3D9D00BD1878</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>BLESocketTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>503915EC199F3D9D00BD1878</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>XCTest.framework</string>
-			<key>path</key>
-			<string>Library/Frameworks/XCTest.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>503915ED199F3D9D00BD1878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>503915EC199F3D9D00BD1878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>503915EE199F3D9D00BD1878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>503915D3199F3D9D00BD1878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>503915EF199F3D9D00BD1878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>503915D7199F3D9D00BD1878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>503915F0199F3D9D00BD1878</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>503915C8199F3D9D00BD1878</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>503915CF199F3D9D00BD1878</string>
-			<key>remoteInfo</key>
-			<string>BLESocket</string>
-		</dict>
-		<key>503915F1199F3D9D00BD1878</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>503915CF199F3D9D00BD1878</string>
-			<key>targetProxy</key>
-			<string>503915F0199F3D9D00BD1878</string>
-		</dict>
-		<key>503915F2199F3D9D00BD1878</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>503915F3199F3D9D00BD1878</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>BLESocketTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>503915F3199F3D9D00BD1878</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>503915F4199F3D9D00BD1878</string>
-				<string>503915F5199F3D9D00BD1878</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>503915F4199F3D9D00BD1878</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>BLESocketTests-Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>503915F5199F3D9D00BD1878</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>503915F6199F3D9D00BD1878</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>503915F6199F3D9D00BD1878</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.strings</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>503915F7199F3D9D00BD1878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>503915F5199F3D9D00BD1878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>503915FA199F3D9D00BD1878</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>503915FB199F3D9D00BD1878</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>503915FC199F3D9D00BD1878</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>503915FD199F3D9D00BD1878</string>
-				<string>503915FE199F3D9D00BD1878</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>503915FD199F3D9D00BD1878</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>CF7C4095CF4851679A17C820</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
-				<string>LaunchImage</string>
-				<key>CODE_SIGN_IDENTITY</key>
-				<string>iPhone Developer</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>BLESocket/BLESocket-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>BLESocket/BLESocket-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>503915FE199F3D9D00BD1878</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>E38E2C2600D0F2DA1258A8D7</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
-				<string>LaunchImage</string>
-				<key>CODE_SIGN_IDENTITY</key>
-				<string>iPhone Developer</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>BLESocket/BLESocket-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>BLESocket/BLESocket-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PROVISIONING_PROFILE</key>
-				<string>db0ef2b6-26ba-4ba9-a6fc-ee64c3b1bdf2</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>503915FF199F3D9D00BD1878</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>50391600199F3D9D00BD1878</string>
-				<string>50391601199F3D9D00BD1878</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>50391600199F3D9D00BD1878</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(BUILT_PRODUCTS_DIR)/BLESocket.app/BLESocket</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
-				</array>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>BLESocket/BLESocket-Prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>BLESocketTests/BLESocketTests-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUNDLE_LOADER)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>xctest</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>50391601199F3D9D00BD1878</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(BUILT_PRODUCTS_DIR)/BLESocket.app/BLESocket</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
-				</array>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>BLESocket/BLESocket-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>BLESocketTests/BLESocketTests-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUNDLE_LOADER)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>xctest</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>5039160A199F546100BD1878</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>50391610199F554A00BD1878</string>
-				<string>50391611199F554A00BD1878</string>
-				<string>5039160B199F547400BD1878</string>
-				<string>5039160C199F547400BD1878</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>List of sockets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5039160B199F547400BD1878</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SocketsViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5039160C199F547400BD1878</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SocketsViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5039160D199F547400BD1878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5039160C199F547400BD1878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5039160E199F547B00BD1878</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>path</key>
-			<string>Storyboard.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5039160F199F547B00BD1878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5039160E199F547B00BD1878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>50391610199F554A00BD1878</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SocketCell.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>50391611199F554A00BD1878</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SocketCell.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>50391612199F554A00BD1878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>50391611199F554A00BD1878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A1113C64B86C4E83B54A83D4</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-BLESocket.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>CE65FFFD34BA40EFB2DD2BF6</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-BLESocket/Pods-BLESocket-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>CF7C4095CF4851679A17C820</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-BLESocket.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-BLESocket/Pods-BLESocket.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E38E2C2600D0F2DA1258A8D7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-BLESocket.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-BLESocket/Pods-BLESocket.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F703DB0493C441A48449EC55</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>503915C8199F3D9D00BD1878</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E69CBD32FED4A5FAC972B5B /* libPods-BLESocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1113C64B86C4E83B54A83D4 /* libPods-BLESocket.a */; };
+		503915D4199F3D9D00BD1878 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503915D3199F3D9D00BD1878 /* Foundation.framework */; };
+		503915D6199F3D9D00BD1878 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503915D5199F3D9D00BD1878 /* CoreGraphics.framework */; };
+		503915D8199F3D9D00BD1878 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503915D7199F3D9D00BD1878 /* UIKit.framework */; };
+		503915DE199F3D9D00BD1878 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 503915DC199F3D9D00BD1878 /* InfoPlist.strings */; };
+		503915E0199F3D9D00BD1878 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503915DF199F3D9D00BD1878 /* main.m */; };
+		503915E4199F3D9D00BD1878 /* VIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 503915E3199F3D9D00BD1878 /* VIAppDelegate.m */; };
+		503915E6199F3D9D00BD1878 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 503915E5199F3D9D00BD1878 /* Images.xcassets */; };
+		503915ED199F3D9D00BD1878 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503915EC199F3D9D00BD1878 /* XCTest.framework */; };
+		503915EE199F3D9D00BD1878 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503915D3199F3D9D00BD1878 /* Foundation.framework */; };
+		503915EF199F3D9D00BD1878 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503915D7199F3D9D00BD1878 /* UIKit.framework */; };
+		503915F7199F3D9D00BD1878 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 503915F5199F3D9D00BD1878 /* InfoPlist.strings */; };
+		5039160D199F547400BD1878 /* SocketsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5039160C199F547400BD1878 /* SocketsViewController.m */; };
+		5039160F199F547B00BD1878 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5039160E199F547B00BD1878 /* Storyboard.storyboard */; };
+		50391612199F554A00BD1878 /* SocketCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50391611199F554A00BD1878 /* SocketCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		503915F0199F3D9D00BD1878 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 503915C8199F3D9D00BD1878 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 503915CF199F3D9D00BD1878;
+			remoteInfo = BLESocket;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		503915D0199F3D9D00BD1878 /* BLESocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLESocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		503915D3199F3D9D00BD1878 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		503915D5199F3D9D00BD1878 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		503915D7199F3D9D00BD1878 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		503915DB199F3D9D00BD1878 /* BLESocket-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BLESocket-Info.plist"; sourceTree = "<group>"; };
+		503915DD199F3D9D00BD1878 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		503915DF199F3D9D00BD1878 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		503915E1199F3D9D00BD1878 /* BLESocket-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BLESocket-Prefix.pch"; sourceTree = "<group>"; };
+		503915E2199F3D9D00BD1878 /* VIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VIAppDelegate.h; sourceTree = "<group>"; };
+		503915E3199F3D9D00BD1878 /* VIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VIAppDelegate.m; sourceTree = "<group>"; };
+		503915E5199F3D9D00BD1878 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		503915EB199F3D9D00BD1878 /* BLESocketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BLESocketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		503915EC199F3D9D00BD1878 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		503915F4199F3D9D00BD1878 /* BLESocketTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BLESocketTests-Info.plist"; sourceTree = "<group>"; };
+		503915F6199F3D9D00BD1878 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5039160B199F547400BD1878 /* SocketsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketsViewController.h; sourceTree = "<group>"; };
+		5039160C199F547400BD1878 /* SocketsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketsViewController.m; sourceTree = "<group>"; };
+		5039160E199F547B00BD1878 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		50391610199F554A00BD1878 /* SocketCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketCell.h; sourceTree = "<group>"; };
+		50391611199F554A00BD1878 /* SocketCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketCell.m; sourceTree = "<group>"; };
+		A1113C64B86C4E83B54A83D4 /* libPods-BLESocket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BLESocket.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF7C4095CF4851679A17C820 /* Pods-BLESocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLESocket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLESocket/Pods-BLESocket.debug.xcconfig"; sourceTree = "<group>"; };
+		E38E2C2600D0F2DA1258A8D7 /* Pods-BLESocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLESocket.release.xcconfig"; path = "Pods/Target Support Files/Pods-BLESocket/Pods-BLESocket.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		503915CD199F3D9D00BD1878 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				503915D6199F3D9D00BD1878 /* CoreGraphics.framework in Frameworks */,
+				503915D8199F3D9D00BD1878 /* UIKit.framework in Frameworks */,
+				503915D4199F3D9D00BD1878 /* Foundation.framework in Frameworks */,
+				1E69CBD32FED4A5FAC972B5B /* libPods-BLESocket.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		503915E8199F3D9D00BD1878 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				503915ED199F3D9D00BD1878 /* XCTest.framework in Frameworks */,
+				503915EF199F3D9D00BD1878 /* UIKit.framework in Frameworks */,
+				503915EE199F3D9D00BD1878 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		277F7A6CE3DCB9321B2284C1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF7C4095CF4851679A17C820 /* Pods-BLESocket.debug.xcconfig */,
+				E38E2C2600D0F2DA1258A8D7 /* Pods-BLESocket.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		503915C7199F3D9D00BD1878 = {
+			isa = PBXGroup;
+			children = (
+				503915D9199F3D9D00BD1878 /* BLESocket */,
+				503915F2199F3D9D00BD1878 /* BLESocketTests */,
+				503915D2199F3D9D00BD1878 /* Frameworks */,
+				503915D1199F3D9D00BD1878 /* Products */,
+				277F7A6CE3DCB9321B2284C1 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		503915D1199F3D9D00BD1878 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				503915D0199F3D9D00BD1878 /* BLESocket.app */,
+				503915EB199F3D9D00BD1878 /* BLESocketTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		503915D2199F3D9D00BD1878 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				503915D5199F3D9D00BD1878 /* CoreGraphics.framework */,
+				503915D3199F3D9D00BD1878 /* Foundation.framework */,
+				503915D7199F3D9D00BD1878 /* UIKit.framework */,
+				503915EC199F3D9D00BD1878 /* XCTest.framework */,
+				A1113C64B86C4E83B54A83D4 /* libPods-BLESocket.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		503915D9199F3D9D00BD1878 /* BLESocket */ = {
+			isa = PBXGroup;
+			children = (
+				503915E5199F3D9D00BD1878 /* Images.xcassets */,
+				5039160A199F546100BD1878 /* List of sockets */,
+				5039160E199F547B00BD1878 /* Storyboard.storyboard */,
+				503915DA199F3D9D00BD1878 /* Supporting Files */,
+				503915E2199F3D9D00BD1878 /* VIAppDelegate.h */,
+				503915E3199F3D9D00BD1878 /* VIAppDelegate.m */,
+			);
+			path = BLESocket;
+			sourceTree = "<group>";
+		};
+		503915DA199F3D9D00BD1878 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				503915DB199F3D9D00BD1878 /* BLESocket-Info.plist */,
+				503915E1199F3D9D00BD1878 /* BLESocket-Prefix.pch */,
+				503915DC199F3D9D00BD1878 /* InfoPlist.strings */,
+				503915DF199F3D9D00BD1878 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		503915F2199F3D9D00BD1878 /* BLESocketTests */ = {
+			isa = PBXGroup;
+			children = (
+				503915F3199F3D9D00BD1878 /* Supporting Files */,
+			);
+			path = BLESocketTests;
+			sourceTree = "<group>";
+		};
+		503915F3199F3D9D00BD1878 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				503915F4199F3D9D00BD1878 /* BLESocketTests-Info.plist */,
+				503915F5199F3D9D00BD1878 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5039160A199F546100BD1878 /* List of sockets */ = {
+			isa = PBXGroup;
+			children = (
+				50391610199F554A00BD1878 /* SocketCell.h */,
+				50391611199F554A00BD1878 /* SocketCell.m */,
+				5039160B199F547400BD1878 /* SocketsViewController.h */,
+				5039160C199F547400BD1878 /* SocketsViewController.m */,
+			);
+			name = "List of sockets";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		503915CF199F3D9D00BD1878 /* BLESocket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 503915FC199F3D9D00BD1878 /* Build configuration list for PBXNativeTarget "BLESocket" */;
+			buildPhases = (
+				F703DB0493C441A48449EC55 /* Check Pods Manifest.lock */,
+				503915CC199F3D9D00BD1878 /* Sources */,
+				503915CD199F3D9D00BD1878 /* Frameworks */,
+				503915CE199F3D9D00BD1878 /* Resources */,
+				CE65FFFD34BA40EFB2DD2BF6 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BLESocket;
+			productName = BLESocket;
+			productReference = 503915D0199F3D9D00BD1878 /* BLESocket.app */;
+			productType = "com.apple.product-type.application";
+		};
+		503915EA199F3D9D00BD1878 /* BLESocketTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 503915FF199F3D9D00BD1878 /* Build configuration list for PBXNativeTarget "BLESocketTests" */;
+			buildPhases = (
+				503915E7199F3D9D00BD1878 /* Sources */,
+				503915E8199F3D9D00BD1878 /* Frameworks */,
+				503915E9199F3D9D00BD1878 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				503915F1199F3D9D00BD1878 /* PBXTargetDependency */,
+			);
+			name = BLESocketTests;
+			productName = BLESocketTests;
+			productReference = 503915EB199F3D9D00BD1878 /* BLESocketTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		503915C8199F3D9D00BD1878 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = VI;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Victor Ilyukevich";
+				TargetAttributes = {
+					503915EA199F3D9D00BD1878 = {
+						TestTargetID = 503915CF199F3D9D00BD1878;
+					};
+				};
+			};
+			buildConfigurationList = 503915CB199F3D9D00BD1878 /* Build configuration list for PBXProject "BLESocket" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 503915C7199F3D9D00BD1878;
+			productRefGroup = 503915D1199F3D9D00BD1878 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				503915CF199F3D9D00BD1878 /* BLESocket */,
+				503915EA199F3D9D00BD1878 /* BLESocketTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		503915CE199F3D9D00BD1878 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				503915DE199F3D9D00BD1878 /* InfoPlist.strings in Resources */,
+				503915E6199F3D9D00BD1878 /* Images.xcassets in Resources */,
+				5039160F199F547B00BD1878 /* Storyboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		503915E9199F3D9D00BD1878 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				503915F7199F3D9D00BD1878 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CE65FFFD34BA40EFB2DD2BF6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BLESocket/Pods-BLESocket-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F703DB0493C441A48449EC55 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		503915CC199F3D9D00BD1878 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50391612199F554A00BD1878 /* SocketCell.m in Sources */,
+				503915E0199F3D9D00BD1878 /* main.m in Sources */,
+				5039160D199F547400BD1878 /* SocketsViewController.m in Sources */,
+				503915E4199F3D9D00BD1878 /* VIAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		503915E7199F3D9D00BD1878 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		503915F1199F3D9D00BD1878 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 503915CF199F3D9D00BD1878 /* BLESocket */;
+			targetProxy = 503915F0199F3D9D00BD1878 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		503915DC199F3D9D00BD1878 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				503915DD199F3D9D00BD1878 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		503915F5199F3D9D00BD1878 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				503915F6199F3D9D00BD1878 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		503915FA199F3D9D00BD1878 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		503915FB199F3D9D00BD1878 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		503915FD199F3D9D00BD1878 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF7C4095CF4851679A17C820 /* Pods-BLESocket.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BLESocket/BLESocket-Prefix.pch";
+				INFOPLIST_FILE = "BLESocket/BLESocket-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		503915FE199F3D9D00BD1878 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E38E2C2600D0F2DA1258A8D7 /* Pods-BLESocket.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BLESocket/BLESocket-Prefix.pch";
+				INFOPLIST_FILE = "BLESocket/BLESocket-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "db0ef2b6-26ba-4ba9-a6fc-ee64c3b1bdf2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		50391600199F3D9D00BD1878 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BLESocket.app/BLESocket";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BLESocket/BLESocket-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BLESocketTests/BLESocketTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		50391601199F3D9D00BD1878 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BLESocket.app/BLESocket";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BLESocket/BLESocket-Prefix.pch";
+				INFOPLIST_FILE = "BLESocketTests/BLESocketTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		503915CB199F3D9D00BD1878 /* Build configuration list for PBXProject "BLESocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				503915FA199F3D9D00BD1878 /* Debug */,
+				503915FB199F3D9D00BD1878 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		503915FC199F3D9D00BD1878 /* Build configuration list for PBXNativeTarget "BLESocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				503915FD199F3D9D00BD1878 /* Debug */,
+				503915FE199F3D9D00BD1878 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		503915FF199F3D9D00BD1878 /* Build configuration list for PBXNativeTarget "BLESocketTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50391600199F3D9D00BD1878 /* Debug */,
+				50391601199F3D9D00BD1878 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 503915C8199F3D9D00BD1878 /* Project object */;
+}
