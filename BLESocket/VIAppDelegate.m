@@ -18,7 +18,7 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 - (void)setupLogging
 {
   [DDLog addLogger:[DDTTYLogger sharedInstance]];
-  [[PTEDashboard sharedDashboard] show];
+  // [[PTEDashboard sharedDashboard] show];
   DDLogInfo(@"Added console dashboard");
 }
 
