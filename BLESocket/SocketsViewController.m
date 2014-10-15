@@ -274,7 +274,6 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
   [self setupRefreshControl];
 
   self.socketPeripherals = [NSMutableArray array];
-  self.centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
 
   [self recreateCentralManager];
 }
