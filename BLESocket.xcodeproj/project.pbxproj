@@ -23,6 +23,7 @@
 		5075DF9219EE5CC30036B852 /* SocketsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5075DF8F19EE5CC30036B852 /* SocketsViewController.m */; };
 		5075DF9319EE5CC30036B852 /* SocketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5075DF9119EE5CC30036B852 /* SocketViewController.m */; };
 		5075DF9919EE6ADE0036B852 /* Globals.m in Sources */ = {isa = PBXBuildFile; fileRef = 5075DF9819EE6ADE0036B852 /* Globals.m */; };
+		5075DF9B19EE6D460036B852 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5075DF9A19EE6D460036B852 /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		5075DF9119EE5CC30036B852 /* SocketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketViewController.m; sourceTree = "<group>"; };
 		5075DF9719EE6ADE0036B852 /* Globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
 		5075DF9819EE6ADE0036B852 /* Globals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Globals.m; sourceTree = "<group>"; };
+		5075DF9A19EE6D460036B852 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		A1113C64B86C4E83B54A83D4 /* libPods-BLESocket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BLESocket.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF7C4095CF4851679A17C820 /* Pods-BLESocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLESocket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLESocket/Pods-BLESocket.debug.xcconfig"; sourceTree = "<group>"; };
 		E38E2C2600D0F2DA1258A8D7 /* Pods-BLESocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLESocket.release.xcconfig"; path = "Pods/Target Support Files/Pods-BLESocket/Pods-BLESocket.release.xcconfig"; sourceTree = "<group>"; };
@@ -134,12 +136,13 @@
 			children = (
 				503915E2199F3D9D00BD1878 /* AppDelegate.h */,
 				503915E3199F3D9D00BD1878 /* AppDelegate.m */,
+				5075DF9719EE6ADE0036B852 /* Globals.h */,
+				5075DF9819EE6ADE0036B852 /* Globals.m */,
 				503915E5199F3D9D00BD1878 /* Images.xcassets */,
+				5075DF9A19EE6D460036B852 /* LaunchScreen.xib */,
 				5075DF8C19EE5CA00036B852 /* Main.storyboard */,
 				5075DF9619EE69880036B852 /* Screens */,
 				503915DA199F3D9D00BD1878 /* Supporting Files */,
-				5075DF9719EE6ADE0036B852 /* Globals.h */,
-				5075DF9819EE6ADE0036B852 /* Globals.m */,
 			);
 			path = BLESocket;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5075DF9B19EE6D460036B852 /* LaunchScreen.xib in Resources */,
 				5075DF8D19EE5CA00036B852 /* Main.storyboard in Resources */,
 				503915DE199F3D9D00BD1878 /* InfoPlist.strings in Resources */,
 				503915E6199F3D9D00BD1878 /* Images.xcassets in Resources */,
@@ -451,7 +455,6 @@
 			baseConfigurationReference = CF7C4095CF4851679A17C820 /* Pods-BLESocket.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BLESocket/BLESocket-Prefix.pch";
@@ -467,7 +470,6 @@
 			baseConfigurationReference = E38E2C2600D0F2DA1258A8D7 /* Pods-BLESocket.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BLESocket/BLESocket-Prefix.pch";
