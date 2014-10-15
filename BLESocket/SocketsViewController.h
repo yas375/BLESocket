@@ -1,11 +1,13 @@
 //
 //  SocketsViewController.h
-//  BLESocket
+//  PlayingWithNav
 //
-//  Created by Victor Ilyukevich on 8/16/14.
+//  Created by Victor Ilyukevich on 10/15/14.
 //  Copyright (c) 2014 Victor Ilyukevich. All rights reserved.
 //
 
-@interface SocketsViewController : UITableViewController
+@class SocketViewController;
 
+@interface SocketsViewController : UITableViewController
 @end
+

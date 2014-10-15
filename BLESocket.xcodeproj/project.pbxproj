@@ -13,15 +13,16 @@
 		503915D8199F3D9D00BD1878 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503915D7199F3D9D00BD1878 /* UIKit.framework */; };
 		503915DE199F3D9D00BD1878 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 503915DC199F3D9D00BD1878 /* InfoPlist.strings */; };
 		503915E0199F3D9D00BD1878 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503915DF199F3D9D00BD1878 /* main.m */; };
-		503915E4199F3D9D00BD1878 /* VIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 503915E3199F3D9D00BD1878 /* VIAppDelegate.m */; };
+		503915E4199F3D9D00BD1878 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 503915E3199F3D9D00BD1878 /* AppDelegate.m */; };
 		503915E6199F3D9D00BD1878 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 503915E5199F3D9D00BD1878 /* Images.xcassets */; };
 		503915ED199F3D9D00BD1878 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503915EC199F3D9D00BD1878 /* XCTest.framework */; };
 		503915EE199F3D9D00BD1878 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503915D3199F3D9D00BD1878 /* Foundation.framework */; };
 		503915EF199F3D9D00BD1878 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503915D7199F3D9D00BD1878 /* UIKit.framework */; };
 		503915F7199F3D9D00BD1878 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 503915F5199F3D9D00BD1878 /* InfoPlist.strings */; };
-		5039160D199F547400BD1878 /* SocketsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5039160C199F547400BD1878 /* SocketsViewController.m */; };
-		5039160F199F547B00BD1878 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5039160E199F547B00BD1878 /* Storyboard.storyboard */; };
-		50391612199F554A00BD1878 /* SocketCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50391611199F554A00BD1878 /* SocketCell.m */; };
+		5075DF8D19EE5CA00036B852 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5075DF8C19EE5CA00036B852 /* Main.storyboard */; };
+		5075DF9219EE5CC30036B852 /* SocketsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5075DF8F19EE5CC30036B852 /* SocketsViewController.m */; };
+		5075DF9319EE5CC30036B852 /* SocketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5075DF9119EE5CC30036B852 /* SocketViewController.m */; };
+		5075DF9919EE6ADE0036B852 /* Globals.m in Sources */ = {isa = PBXBuildFile; fileRef = 5075DF9819EE6ADE0036B852 /* Globals.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,18 +44,20 @@
 		503915DD199F3D9D00BD1878 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		503915DF199F3D9D00BD1878 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		503915E1199F3D9D00BD1878 /* BLESocket-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BLESocket-Prefix.pch"; sourceTree = "<group>"; };
-		503915E2199F3D9D00BD1878 /* VIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VIAppDelegate.h; sourceTree = "<group>"; };
-		503915E3199F3D9D00BD1878 /* VIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VIAppDelegate.m; sourceTree = "<group>"; };
+		503915E2199F3D9D00BD1878 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		503915E3199F3D9D00BD1878 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		503915E5199F3D9D00BD1878 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		503915EB199F3D9D00BD1878 /* BLESocketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BLESocketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		503915EC199F3D9D00BD1878 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		503915F4199F3D9D00BD1878 /* BLESocketTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BLESocketTests-Info.plist"; sourceTree = "<group>"; };
 		503915F6199F3D9D00BD1878 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5039160B199F547400BD1878 /* SocketsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketsViewController.h; sourceTree = "<group>"; };
-		5039160C199F547400BD1878 /* SocketsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketsViewController.m; sourceTree = "<group>"; };
-		5039160E199F547B00BD1878 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
-		50391610199F554A00BD1878 /* SocketCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketCell.h; sourceTree = "<group>"; };
-		50391611199F554A00BD1878 /* SocketCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketCell.m; sourceTree = "<group>"; };
+		5075DF8C19EE5CA00036B852 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		5075DF8E19EE5CC30036B852 /* SocketsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketsViewController.h; sourceTree = "<group>"; };
+		5075DF8F19EE5CC30036B852 /* SocketsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketsViewController.m; sourceTree = "<group>"; };
+		5075DF9019EE5CC30036B852 /* SocketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketViewController.h; sourceTree = "<group>"; };
+		5075DF9119EE5CC30036B852 /* SocketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketViewController.m; sourceTree = "<group>"; };
+		5075DF9719EE6ADE0036B852 /* Globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
+		5075DF9819EE6ADE0036B852 /* Globals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Globals.m; sourceTree = "<group>"; };
 		A1113C64B86C4E83B54A83D4 /* libPods-BLESocket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BLESocket.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF7C4095CF4851679A17C820 /* Pods-BLESocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLESocket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLESocket/Pods-BLESocket.debug.xcconfig"; sourceTree = "<group>"; };
 		E38E2C2600D0F2DA1258A8D7 /* Pods-BLESocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLESocket.release.xcconfig"; path = "Pods/Target Support Files/Pods-BLESocket/Pods-BLESocket.release.xcconfig"; sourceTree = "<group>"; };
@@ -129,12 +132,14 @@
 		503915D9199F3D9D00BD1878 /* BLESocket */ = {
 			isa = PBXGroup;
 			children = (
+				503915E2199F3D9D00BD1878 /* AppDelegate.h */,
+				503915E3199F3D9D00BD1878 /* AppDelegate.m */,
 				503915E5199F3D9D00BD1878 /* Images.xcassets */,
-				5039160A199F546100BD1878 /* List of sockets */,
-				5039160E199F547B00BD1878 /* Storyboard.storyboard */,
+				5075DF8C19EE5CA00036B852 /* Main.storyboard */,
+				5075DF9619EE69880036B852 /* Screens */,
 				503915DA199F3D9D00BD1878 /* Supporting Files */,
-				503915E2199F3D9D00BD1878 /* VIAppDelegate.h */,
-				503915E3199F3D9D00BD1878 /* VIAppDelegate.m */,
+				5075DF9719EE6ADE0036B852 /* Globals.h */,
+				5075DF9819EE6ADE0036B852 /* Globals.m */,
 			);
 			path = BLESocket;
 			sourceTree = "<group>";
@@ -167,15 +172,31 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5039160A199F546100BD1878 /* List of sockets */ = {
+		5075DF9419EE693C0036B852 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				50391610199F554A00BD1878 /* SocketCell.h */,
-				50391611199F554A00BD1878 /* SocketCell.m */,
-				5039160B199F547400BD1878 /* SocketsViewController.h */,
-				5039160C199F547400BD1878 /* SocketsViewController.m */,
+				5075DF8E19EE5CC30036B852 /* SocketsViewController.h */,
+				5075DF8F19EE5CC30036B852 /* SocketsViewController.m */,
 			);
-			name = "List of sockets";
+			name = List;
+			sourceTree = "<group>";
+		};
+		5075DF9519EE69530036B852 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				5075DF9019EE5CC30036B852 /* SocketViewController.h */,
+				5075DF9119EE5CC30036B852 /* SocketViewController.m */,
+			);
+			name = Details;
+			sourceTree = "<group>";
+		};
+		5075DF9619EE69880036B852 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				5075DF9519EE69530036B852 /* Details */,
+				5075DF9419EE693C0036B852 /* List */,
+			);
+			name = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,9 +277,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5075DF8D19EE5CA00036B852 /* Main.storyboard in Resources */,
 				503915DE199F3D9D00BD1878 /* InfoPlist.strings in Resources */,
 				503915E6199F3D9D00BD1878 /* Images.xcassets in Resources */,
-				5039160F199F547B00BD1878 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,10 +331,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50391612199F554A00BD1878 /* SocketCell.m in Sources */,
 				503915E0199F3D9D00BD1878 /* main.m in Sources */,
-				5039160D199F547400BD1878 /* SocketsViewController.m in Sources */,
-				503915E4199F3D9D00BD1878 /* VIAppDelegate.m in Sources */,
+				5075DF9219EE5CC30036B852 /* SocketsViewController.m in Sources */,
+				503915E4199F3D9D00BD1878 /* AppDelegate.m in Sources */,
+				5075DF9919EE6ADE0036B852 /* Globals.m in Sources */,
+				5075DF9319EE5CC30036B852 /* SocketViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

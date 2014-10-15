@@ -6,11 +6,11 @@
 //  Copyright (c) 2014 Victor Ilyukevich. All rights reserved.
 //
 
-#import "VIAppDelegate.h"
+#import "AppDelegate.h"
 
 int main(int argc, char * argv[])
 {
   @autoreleasepool {
-      return UIApplicationMain(argc, argv, nil, NSStringFromClass([VIAppDelegate class]));
+      return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
   }
 }

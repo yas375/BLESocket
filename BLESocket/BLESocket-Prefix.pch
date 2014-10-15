@@ -16,4 +16,6 @@
 
   #import <BlocksKit/BlocksKit.h>
   #import <CocoaLumberjack/CocoaLumberjack.h>
+
+  #import "Globals.h"
 #endif

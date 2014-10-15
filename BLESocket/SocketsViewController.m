@@ -1,13 +1,13 @@
 //
 //  SocketsViewController.m
-//  BLESocket
+//  PlayingWithNav
 //
-//  Created by Victor Ilyukevich on 8/16/14.
+//  Created by Victor Ilyukevich on 10/15/14.
 //  Copyright (c) 2014 Victor Ilyukevich. All rights reserved.
 //
 
 #import "SocketsViewController.h"
-#import "SocketCell.h"
+#import "SocketViewController.h"
 @import CoreBluetooth;
 
 static const int ddLogLevel = LOG_LEVEL_VERBOSE;
@@ -21,6 +21,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 @property(nonatomic,strong) CBCentralManager *centralManager;
 @property(nonatomic,strong) UISegmentedControl *scanModeSwitcher;
 @property(nonatomic,strong) NSMutableArray *socketPeripherals;
+@property(nonatomic,strong) SocketViewController *socketViewController;
 @end
 
 @implementation SocketsViewController
@@ -79,7 +80,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 - (NSArray *)servicesToScan
 {
-  if (self.scanModeSwitcher.selectedSegmentIndex == 0) {
+  if (BluetoothDebuggingEnabled() && self.scanModeSwitcher.selectedSegmentIndex == 0) {
     return nil;
   }
   return @[SOCKET_SERVICE_UUID];
@@ -136,7 +137,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
   [self.tableView reloadData];
 }
 
- - (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral
+- (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral
 {
   DDLogVerbose(@"Did connect peripharal %@", peripheral);
 
@@ -191,6 +192,47 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
   [self.tableView reloadData];
 }
 
+#pragma mark - NSObject
+
+- (void)awakeFromNib {
+  [super awakeFromNib];
+  if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+    self.clearsSelectionOnViewWillAppear = NO;
+    self.preferredContentSize = CGSizeMake(320.0, 600.0);
+  }
+}
+
+#pragma mark - UIViewController
+
+- (void)viewDidLoad {
+  [super viewDidLoad];
+
+  self.socketViewController = (SocketViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+
+  if (BluetoothDebuggingEnabled()) {
+    self.navigationItem.rightBarButtonItem = [self makeScanModeSwitcher];
+  }
+  [self setupRefreshControl];
+
+  self.socketPeripherals = [NSMutableArray array];
+
+  [self recreateCentralManager];
+}
+
+#pragma mark - Segues
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  if ([[segue identifier] isEqualToString:@"showDetail"]) {
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    NSDate *object = self.socketPeripherals[indexPath.row];
+    SocketViewController *controller = (SocketViewController *)[[segue destinationViewController] topViewController];
+    [controller setDetailItem:object];
+    controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
+    controller.navigationItem.leftItemsSupplementBackButton = YES;
+  }
+}
+
+
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -205,7 +247,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  SocketCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"SocketCellIdentifier"];
+  UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Cell"];
 
   CBPeripheral *peripheral = self.socketPeripherals[indexPath.row];
 
@@ -260,22 +302,8 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
   }
 
   cell.detailTextLabel.text = [NSString stringWithFormat:@"Socket state: %@", state];
-
+  
   return cell;
-}
-
-#pragma mark - UIViewController
-
-- (void)viewDidLoad
-{
-  [super viewDidLoad];
-
-  self.navigationItem.rightBarButtonItem = [self makeScanModeSwitcher];
-  [self setupRefreshControl];
-
-  self.socketPeripherals = [NSMutableArray array];
-
-  [self recreateCentralManager];
 }
 
 @end
