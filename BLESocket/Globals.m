@@ -8,6 +8,8 @@
 
 #import "Globals.h"
 
+NSString *const kVICentralManagerIdentifier = @"VICentralManagerIdentifier";
+
 BOOL BluetoothDebuggingEnabled()
 {
   return NO;

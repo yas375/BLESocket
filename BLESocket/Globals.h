@@ -6,4 +6,6 @@
 //  Copyright (c) 2014 Victor Ilyukevich. All rights reserved.
 //
 
+extern NSString *const kVICentralManagerIdentifier;
+
 BOOL BluetoothDebuggingEnabled();

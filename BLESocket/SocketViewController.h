@@ -6,10 +6,11 @@
 //  Copyright (c) 2014 Victor Ilyukevich. All rights reserved.
 //
 
-@interface SocketViewController : UIViewController
+@import CoreBluetooth;
 
-@property (strong, nonatomic) id detailItem;
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@interface SocketViewController : UITableViewController
+
+@property (strong, nonatomic) CBPeripheral *socket;
 
 @end
 

@@ -17,14 +17,43 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 #define SOCKET_CURRENT_CHARACTERISTIC_UUID [CBUUID UUIDWithString:@"11FF91F6-F974-EEA6-4F4C-D732E03823B6"]
 
 @interface SocketsViewController ()
-<CBCentralManagerDelegate,CBPeripheralDelegate>
+<CBCentralManagerDelegate>
 @property(nonatomic,strong) CBCentralManager *centralManager;
 @property(nonatomic,strong) UISegmentedControl *scanModeSwitcher;
-@property(nonatomic,strong) NSMutableArray *socketPeripherals;
+// udid -> @YES/@NO
+@property(nonatomic,strong) NSMutableDictionary *discoveredStatuses;
+@property(nonatomic,strong) NSMutableArray *socketPeripherals; // TODO: rename to otherDevices
+@property(nonatomic,strong) NSMutableArray *knownDevices;
 @property(nonatomic,strong) SocketViewController *socketViewController;
 @end
 
 @implementation SocketsViewController
+
+#pragma mark - Getters
+
+- (NSMutableDictionary *)discoveredStatuses
+{
+  if (_discoveredStatuses == nil) {
+    _discoveredStatuses = [NSMutableDictionary dictionary];
+  }
+  return _discoveredStatuses;
+}
+
+- (NSMutableArray *)knownDevices
+{
+  if (_knownDevices == nil) {
+    _knownDevices = [NSMutableArray array];
+  }
+  return _knownDevices;
+}
+
+- (NSMutableArray *)socketPeripherals
+{
+  if (_socketPeripherals == nil) {
+    _socketPeripherals = [NSMutableArray array];
+  }
+  return _socketPeripherals;
+}
 
 #pragma mark - Methods
 
@@ -70,7 +99,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
   [self.socketPeripherals removeAllObjects];
   [self.tableView reloadData];
 
-  self.centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
+  self.centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil options:@{ CBCentralManagerOptionRestoreIdentifierKey: kVICentralManagerIdentifier }];
 }
 
 - (void)scanModeSegmentedControlAction:(UISegmentedControl *)sender
@@ -95,6 +124,20 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 #pragma mark - CBCentralManagerDelegate
 
+- (void)centralManager:(CBCentralManager *)central willRestoreState:(NSDictionary *)dict
+{
+  // Very first call if the app is relaunched and central manager is already scanning.
+
+  DDLogVerbose(@"centralManager:willRestoreState:");
+  // TODO: do we need to set the reference?
+  DDLogVerbose(@"%@ - %@", self.centralManager, central);
+  NSArray *peripherals = dict[CBCentralManagerRestoredStatePeripheralsKey];
+
+  for (CBPeripheral *peripheral in peripherals) {
+    [self.socketPeripherals addObject:peripheral];
+  }
+}
+
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central
 {
   DDLogVerbose(@"centralManagerDidUpdateState %d", (int)central.state);
@@ -103,6 +146,19 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     NSArray *services = self.servicesToScan;
     DDLogVerbose(@"Will scan for peripharals with services: %@", services);
     [self.centralManager scanForPeripheralsWithServices:services options:nil];
+
+    // TODO: state restoration
+//    // If we were restored with connected devices we might want to subscribe to the changes
+//    for (CBPeripheral *peripheral in self.socketPeripherals) {
+//      if (peripheral.state == CBPeripheralStateConnected) {
+//        // Have we discovered needed service?
+//        // - NO - start discovering for services
+//        // Have we discovered the characteristic?
+//        // - NO - start discovering
+//        // Are we subscribed?
+//        // - NO - subscribe
+//      }
+//    }
   }
   else {
     NSString *message = [self errorMesssageForState:central.state];
@@ -113,89 +169,50 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
   }
 }
 
+- (void)extractStatusForDevice:(CBPeripheral *)device fromAdvertisementData:(NSDictionary *)advertisementData
+{
+  NSUUID *identifier = device.identifier;
+  NSNumber *value;
+
+  NSDictionary *serviceData = advertisementData[@"kCBAdvDataServiceData"];
+
+  if (serviceData != nil) {
+    CBUUID *uuid = [CBUUID UUIDWithString:@"11FF"]; // todo: define somewehere in one place
+    NSData *valueAsData = serviceData[uuid];
+
+    if (valueAsData != nil) {
+      uint16_t decodedInteger;
+      [valueAsData getBytes:&decodedInteger length:valueAsData.length];
+      uint16_t isEnabled = CFSwapInt16(decodedInteger);
+      value = @((BOOL)isEnabled);
+    }
+  }
+  if (value) {
+    self.discoveredStatuses[identifier] = value;
+  }
+  else {
+    [self.discoveredStatuses removeObjectForKey:identifier];
+  }
+}
+
 - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI
 {
   DDLogVerbose(@"Discovered potential socket peripharal %@ with advertisement data: \n%@", peripheral, advertisementData);
 
+  [self extractStatusForDevice:peripheral fromAdvertisementData:advertisementData]; // TODO: update the list in any case?
+
   if ([self.socketPeripherals containsObject:peripheral] == NO) {
     [self.socketPeripherals addObject:peripheral];
-
-    [self.centralManager connectPeripheral:peripheral options:nil];
   }
-  [self.tableView reloadData];
-}
-
-- (void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error
-{
-  DDLogError(@"Failed to connect peripharal %@ (%@)", peripheral, error);
-  [self.tableView reloadData];
-}
-
-- (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error
-{
-  DDLogVerbose(@"Disconnected peripharal %@ (%@)", peripheral, error);
-  [self.tableView reloadData];
-}
-
-- (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral
-{
-  DDLogVerbose(@"Did connect peripharal %@", peripheral);
-
-  peripheral.delegate = self;
-  DDLogVerbose(@"Will discover service %@", SOCKET_SERVICE_UUID);
-  [peripheral discoverServices:@[SOCKET_SERVICE_UUID]];
-  [self.tableView reloadData];
-}
-
-#pragma mark - CBPeripheralDelegate
-
-- (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error
-{
-  DDLogVerbose(@"didDiscoverServices:");
-  if (error) {
-    DDLogError(@"Error while discovering services of peripheral %@ (%@)", peripheral, error);
-  } else {
-    for (CBService *service in peripheral.services) {
-      if ([service.UUID isEqual:SOCKET_SERVICE_UUID]) {
-        DDLogVerbose(@"Will discover characteristic %@", SOCKET_CURRENT_CHARACTERISTIC_UUID);
-        [peripheral discoverCharacteristics:@[SOCKET_CURRENT_CHARACTERISTIC_UUID] forService:service];
-      }
-    }
-  }
-}
-
-- (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error
-{
-  DDLogVerbose(@"didDiscoverCharacteristicsForService: %@; error: %@", service, error);
-  BOOL needsToDisconnect = YES;
-
-  if (error) {
-    DDLogError(@"Error while discovering characteristic of service %@ of peripheral %@ (%@)", service, peripheral, error);
-  } else if ([service.UUID isEqual:SOCKET_SERVICE_UUID]) {
-    for (CBCharacteristic *characteristic in service.characteristics) {
-      if ([characteristic.UUID isEqual:SOCKET_CURRENT_CHARACTERISTIC_UUID]) {
-        DDLogVerbose(@"Reading value for characteristic %@", characteristic);
-        [peripheral readValueForCharacteristic:characteristic];
-        needsToDisconnect = NO;
-      }
-    }
-  }
-
-  if (needsToDisconnect) {
-    [self.centralManager cancelPeripheralConnection:peripheral];
-  }
-}
-
-- (void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error
-{
-  DDLogVerbose(@"Peripheral %@ did update value for characteristc %@. Error %@", peripheral, characteristic, error);
   [self.tableView reloadData];
 }
 
 #pragma mark - NSObject
 
-- (void)awakeFromNib {
+- (void)awakeFromNib
+{
   [super awakeFromNib];
+
   if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
     self.clearsSelectionOnViewWillAppear = NO;
     self.preferredContentSize = CGSizeMake(320.0, 600.0);
@@ -204,7 +221,8 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 #pragma mark - UIViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
   [super viewDidLoad];
 
   self.socketViewController = (SocketViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
@@ -214,8 +232,6 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
   }
   [self setupRefreshControl];
 
-  self.socketPeripherals = [NSMutableArray array];
-
   [self recreateCentralManager];
 }
 
@@ -224,25 +240,39 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
   if ([[segue identifier] isEqualToString:@"showDetail"]) {
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-    NSDate *object = self.socketPeripherals[indexPath.row];
+    CBPeripheral *object = self.socketPeripherals[indexPath.row];
     SocketViewController *controller = (SocketViewController *)[[segue destinationViewController] topViewController];
-    [controller setDetailItem:object];
+    controller.socket = object;
+
     controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
     controller.navigationItem.leftItemsSupplementBackButton = YES;
   }
 }
 
-
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-  return 1;
+  return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+  if (section == 0) {
+    return self.knownDevices.count;
+  }
+
   return self.socketPeripherals.count;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+  if (section == 0) {
+    return @"My sockets";
+  }
+  else {
+    return @"Other sockets";
+  }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -250,59 +280,16 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
   UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Cell"];
 
   CBPeripheral *peripheral = self.socketPeripherals[indexPath.row];
+  cell.textLabel.text = peripheral.name;
 
-  NSString *connactionState;
-  switch (peripheral.state) {
-    case CBPeripheralStateDisconnected:
-      connactionState = @"disconnected";
-      break;
-    case CBPeripheralStateConnecting:
-      connactionState = @"connecting...";
-      break;
-    case CBPeripheralStateConnected:
-      connactionState = @"connected";
-      break;
+  NSNumber *number = self.discoveredStatuses[peripheral.identifier];
+  if (number && number.boolValue) {
+    cell.detailTextLabel.text = @"Enabled";
   }
-  cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@", peripheral.name, connactionState];
-
-  NSString *state = @"unknown";
-
-  CBService *service = [peripheral.services bk_match:^BOOL(CBService *obj) {
-    return [obj.UUID isEqual:SOCKET_SERVICE_UUID];
-  }];
-
-  if (service) {
-    CBCharacteristic *characteristic = [service.characteristics bk_match:^BOOL(CBCharacteristic *obj) {
-      return [obj.UUID isEqual:SOCKET_CURRENT_CHARACTERISTIC_UUID];
-    }];
-
-    if (characteristic) {
-      if (characteristic.value) {
-        uint8_t *bytes = (uint8_t *)characteristic.value.bytes;
-
-        if (bytes == NULL) {
-          state = @"read value is NULL";
-        }
-        else if (*bytes == 0x01) {
-          state = @"enabled";
-        }
-        else if (*bytes == 0x00) {
-          state = @"disabled";
-        }
-        else {
-          DDLogVerbose(@"Error reading value of characteristic %@", characteristic);
-          state = @"error during reading value";
-        }
-      }
-      else {
-        DDLogVerbose(@"nil value of characteristic %@", characteristic);
-        state = @"value is nil";
-      }
-    }
+  else {
+    cell.detailTextLabel.text = @"Disabled";
   }
 
-  cell.detailTextLabel.text = [NSString stringWithFormat:@"Socket state: %@", state];
-  
   return cell;
 }
 

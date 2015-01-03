@@ -24,6 +24,8 @@
 		5075DF9319EE5CC30036B852 /* SocketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5075DF9119EE5CC30036B852 /* SocketViewController.m */; };
 		5075DF9919EE6ADE0036B852 /* Globals.m in Sources */ = {isa = PBXBuildFile; fileRef = 5075DF9819EE6ADE0036B852 /* Globals.m */; };
 		5075DF9B19EE6D460036B852 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5075DF9A19EE6D460036B852 /* LaunchScreen.xib */; };
+		5089682C1A1F99690008B5C5 /* SocketConnectionStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5089682B1A1F99690008B5C5 /* SocketConnectionStatusCell.m */; };
+		50D6C0211A0FAC1800BC6B23 /* Socket.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D6C0201A0FAC1800BC6B23 /* Socket.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,10 @@
 		5075DF9719EE6ADE0036B852 /* Globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
 		5075DF9819EE6ADE0036B852 /* Globals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Globals.m; sourceTree = "<group>"; };
 		5075DF9A19EE6D460036B852 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		5089682A1A1F99690008B5C5 /* SocketConnectionStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketConnectionStatusCell.h; sourceTree = "<group>"; };
+		5089682B1A1F99690008B5C5 /* SocketConnectionStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketConnectionStatusCell.m; sourceTree = "<group>"; };
+		50D6C01F1A0FAC1800BC6B23 /* Socket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Socket.h; sourceTree = "<group>"; };
+		50D6C0201A0FAC1800BC6B23 /* Socket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Socket.m; sourceTree = "<group>"; };
 		A1113C64B86C4E83B54A83D4 /* libPods-BLESocket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BLESocket.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF7C4095CF4851679A17C820 /* Pods-BLESocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLESocket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLESocket/Pods-BLESocket.debug.xcconfig"; sourceTree = "<group>"; };
 		E38E2C2600D0F2DA1258A8D7 /* Pods-BLESocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLESocket.release.xcconfig"; path = "Pods/Target Support Files/Pods-BLESocket/Pods-BLESocket.release.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +148,8 @@
 				5075DF9A19EE6D460036B852 /* LaunchScreen.xib */,
 				5075DF8C19EE5CA00036B852 /* Main.storyboard */,
 				5075DF9619EE69880036B852 /* Screens */,
+				50D6C01F1A0FAC1800BC6B23 /* Socket.h */,
+				50D6C0201A0FAC1800BC6B23 /* Socket.m */,
 				503915DA199F3D9D00BD1878 /* Supporting Files */,
 			);
 			path = BLESocket;
@@ -187,6 +195,7 @@
 		5075DF9519EE69530036B852 /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				5089682D1A1F9AA50008B5C5 /* Cells */,
 				5075DF9019EE5CC30036B852 /* SocketViewController.h */,
 				5075DF9119EE5CC30036B852 /* SocketViewController.m */,
 			);
@@ -200,6 +209,15 @@
 				5075DF9419EE693C0036B852 /* List */,
 			);
 			name = Screens;
+			sourceTree = "<group>";
+		};
+		5089682D1A1F9AA50008B5C5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5089682A1A1F99690008B5C5 /* SocketConnectionStatusCell.h */,
+				5089682B1A1F99690008B5C5 /* SocketConnectionStatusCell.m */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +270,13 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Victor Ilyukevich";
 				TargetAttributes = {
+					503915CF199F3D9D00BD1878 = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
 					503915EA199F3D9D00BD1878 = {
 						TestTargetID = 503915CF199F3D9D00BD1878;
 					};
@@ -336,7 +361,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				503915E0199F3D9D00BD1878 /* main.m in Sources */,
+				5089682C1A1F99690008B5C5 /* SocketConnectionStatusCell.m in Sources */,
 				5075DF9219EE5CC30036B852 /* SocketsViewController.m in Sources */,
+				50D6C0211A0FAC1800BC6B23 /* Socket.m in Sources */,
 				503915E4199F3D9D00BD1878 /* AppDelegate.m in Sources */,
 				5075DF9919EE6ADE0036B852 /* Globals.m in Sources */,
 				5075DF9319EE5CC30036B852 /* SocketViewController.m in Sources */,

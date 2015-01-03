@@ -7,6 +7,7 @@
 //
 
 #import "SocketViewController.h"
+#import "SocketConnectionStatusCell.h"
 
 @interface SocketViewController ()
 
@@ -14,23 +15,29 @@
 
 @implementation SocketViewController
 
-- (void)setDetailItem:(id)newDetailItem {
-  if (_detailItem != newDetailItem) {
-    _detailItem = newDetailItem;
+#pragma mark - UITableViewDataSource
 
-    [self configureView];
-  }
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+  return 1;
 }
 
-- (void)configureView {
-  if (self.detailItem) {
-    self.detailDescriptionLabel.text = [self.detailItem description];
-  }
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+  return 1;
 }
 
-- (void)viewDidLoad {
-  [super viewDidLoad];
-  [self configureView];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+  SocketConnectionStatusCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ConnectionStatus"];
+
+  [cell configureForState:self.socket.state];
+
+  return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  NSLog(@"Tapped %@", indexPath);
 }
 
 @end
